@@ -14,3 +14,6 @@ If figured out several workarounds to mitigate the issue which might also help t
 2. Removing the Spring Data ReST dependecy in the pom solves the issue.
 3. Making the initialization of the application event publisher lazy in `workspace.domain.Workspace.WorkspaceEventManager` solves the issue.
 4. Adding a mock listerner in `workspace.domain.WorkspaceRepositoryTest` solves the issue. 
+
+---
+Discussed in: https://stackoverflow.com/questions/63829138/spring-context-initialisation-hangs-when-executing-a-test-annotated-with-spring
