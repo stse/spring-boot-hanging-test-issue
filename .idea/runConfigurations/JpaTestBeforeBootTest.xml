@@ -1,0 +1,18 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="JpaTestBeforeBootTest" type="JUnit" factoryName="JUnit">
+    <module name="spring-boot-hanging-test-issue" />
+    <useClassPathOnly />
+    <option name="ALTERNATIVE_JRE_PATH" value="OpenJDK 11" />
+    <option name="MAIN_CLASS_NAME" value="" />
+    <option name="METHOD_NAME" value="" />
+    <option name="TEST_OBJECT" value="pattern" />
+    <option name="PARAMETERS" value="" />
+    <patterns>
+      <pattern testClass="workspace.domain.WorkspaceRepositoryTest" />
+      <pattern testClass="workspace.api.rest.WorkspaceResourceTest" />
+    </patterns>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
