@@ -15,5 +15,7 @@ I figured out several workarounds to mitigate the issue which might also help to
 3. Making the initialization of the application event publisher lazy in `workspace.domain.Workspace.WorkspaceEventManager` solves the issue.
 4. Adding a mock listerner in `workspace.domain.WorkspaceRepositoryTest` solves the issue. 
 
+After the discussion of this topic on StackOverflow the most convenient workaround or even the solution is perhaps to move the configuration for `@Asnyc` into its own configuration class. So remove the `@EnableAsnyc` from `Application` and create a new class annotated with `@Configuration` and `@EnableAsnc` in the same package. This ensures that in the JPATest `workspace.domain.WorkspaceRepositoryTest` is disabled because Spring Boot does not consider configuration clases automatically when `@DataJpaTest` is used but if the application is started then `@Asnyc` is enabled because Spring Boot finds the new configuration via the component scan.
+
 ---
 Discussed in: https://stackoverflow.com/questions/63829138/spring-context-initialisation-hangs-when-executing-a-test-annotated-with-spring
